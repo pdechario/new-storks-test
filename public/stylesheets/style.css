@@ -6,42 +6,6 @@ body {
   text-align: center;
 }
 
-/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
 /* Style the active link (or home/logo) */
 .active {
   background-color: #04AA6D;
@@ -94,4 +58,113 @@ input[type=text], input[type="email"], input[type="password"], select, textarea 
 .login-btn {
   background-color: #89C7FF;
 }
+
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75%;
+  width: 75%;
+  border-radius: 10px;
+}
+
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: rgb(235, 235, 235);
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  float: left;
+
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: daytona;
+  font-size: 17px;
+  display: block;
+  background-color: #4691EF;
+  
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  float: left;
+  background: black;
+  display: block;
+  float: top;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #1477d2;
+  color: white;
+}
+.homepagelogo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 10%;
+      width: 10%;
+      border-radius: 50%;
+}
+
+.message-box{
+  display: block;
+      margin-left: auto;
+      margin-right: auto;
+      position: bottom;
+}
+
+/* Markers to create favors */
 

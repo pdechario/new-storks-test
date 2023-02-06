@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
+    <title>Storks</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script type="module" src="./index.ts"></script>
   </head>
   <body>
     <main>
-      <h1>Hello <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
-      <h1>Dashboard</h1>
-      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <h1>Hello, <%= user.charAt(0).toUpperCase() + user.slice(1) %></h1>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
 
       <!-- Top Navigation Menu -->
+
       <div class="topnav">
-        <a href="#home" class="active">Home</a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-          <a href="#news">Request</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="#">Rewards</a>
+          <a href="#">Profile</a>
+          <a href="/users/logout">Logout</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
       </div>
-      <a href="/users/logout">Logout</a>
+      <img
+        src="\images\location.png"
+        class="homepagelogo"
+        alt="Pin Icon"
+        height="200px"
+        width="200px"
+      />
     </main>
+
     <script>
       function myFunction() {
         var x = document.getElementById("myLinks");
@@ -47,5 +58,15 @@
         }
       }
     </script>
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD20T4sJfLYTn4uJNOw-CczQS_PY6JfVc8&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+    <button class="login-btn">Add Marker</button>
+
+    <script src="/./server.js"></script>
   </body>
 </html>
